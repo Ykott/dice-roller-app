@@ -7,8 +7,11 @@ const dotPositions: Record<number, number[]> = {
   6: [0, 2, 3, 5, 6, 8],
 };
 
-export default function Die(){
-    const value = 2
+interface DieProps {
+    value: number;
+}
+
+export default function Die({ value }: DieProps){
     const dots = dotPositions[value] ?? [];
 
     return (
